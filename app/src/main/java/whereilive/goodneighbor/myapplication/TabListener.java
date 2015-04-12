@@ -1,11 +1,12 @@
 package whereilive.goodneighbor.myapplication;
 
-import android.app.ActionBar;
 import android.app.Activity;
-import android.app.Fragment;
-import android.app.FragmentTransaction;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
+import android.support.v7.app.ActionBar;
+
 /** @todo Why cant i make it static **/
-public  class TabListener<T extends Fragment> implements ActionBar.TabListener, android.support.v7.app.ActionBar.TabListener {
+public  class TabListener<T extends Fragment> implements ActionBar.TabListener {
     private Fragment mFragment;
     private final Activity mActivity;
     private final String mTag;
@@ -23,7 +24,7 @@ public  class TabListener<T extends Fragment> implements ActionBar.TabListener, 
     }
 
     /* The following are each of the ActionBar.TabListener callbacks */
-
+    @Override
     public void onTabSelected(ActionBar.Tab tab, FragmentTransaction ft) {
         // Check if the fragment is already initialized
         if (mFragment == null) {
@@ -45,20 +46,5 @@ public  class TabListener<T extends Fragment> implements ActionBar.TabListener, 
 
     public void onTabReselected(ActionBar.Tab tab, FragmentTransaction ft) {
         // User selected the already selected tab. Usually do nothing.
-    }
-
-    @Override
-    public void onTabSelected(android.support.v7.app.ActionBar.Tab tab, android.support.v4.app.FragmentTransaction fragmentTransaction) {
-
-    }
-
-    @Override
-    public void onTabUnselected(android.support.v7.app.ActionBar.Tab tab, android.support.v4.app.FragmentTransaction fragmentTransaction) {
-
-    }
-
-    @Override
-    public void onTabReselected(android.support.v7.app.ActionBar.Tab tab, android.support.v4.app.FragmentTransaction fragmentTransaction) {
-
     }
 }
