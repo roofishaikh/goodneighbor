@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">UnitedNeighbors</string>
+
+
+    <string name="tab1">Home</string>
+    <string name="tab2">Info</string>
+    <string name="tab3">Neighbors</string>
+
+    <string name="tab4">Mail</string>
+
+    <string name="action_settings">Settings</string>
+</resources>
