@@ -43,19 +43,19 @@ public class MainActivity extends ActionBarActivity {
         setContentView(R.layout.activity_main);
 
         ActionBar.Tab tab1 = actionBar.newTab()
-                .setText(R.string.tab1).setTabListener(new TabListener<HomeFragment>(
+                .setIcon(R.drawable.home).setTabListener(new TabListener<HomeFragment>(
                         this, "Home", HomeFragment.class));
         actionBar.addTab(tab1);
         ActionBar.Tab tab2= actionBar.newTab()
-                .setText(R.string.tab2).setTabListener(new TabListener<InfoFragment>(
+                .setIcon(R.drawable.info).setTabListener(new TabListener<InfoFragment>(
                         this, "Info", InfoFragment.class));
         actionBar.addTab(tab2);
         ActionBar.Tab tab3= actionBar.newTab()
-                .setText(R.string.tab3).setTabListener(new TabListener<HomeFragment>(
+                .setIcon(R.drawable.person).setTabListener(new TabListener<HomeFragment>(
                         this, "Neighbors", HomeFragment.class));
         actionBar.addTab(tab3);
         ActionBar.Tab tab4= actionBar.newTab()
-                .setText(R.string.tab4).setTabListener(new TabListener<HomeFragment>(
+                .setIcon(R.drawable.mail).setTabListener(new TabListener<HomeFragment>(
                         this, "Mail", HomeFragment.class));
         actionBar.addTab(tab4);
 
