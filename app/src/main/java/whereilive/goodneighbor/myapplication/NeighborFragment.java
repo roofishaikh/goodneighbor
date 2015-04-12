@@ -7,17 +7,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AbsListView;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.ListAdapter;
 import android.widget.TextView;
 
 import java.util.ArrayList;
 
-import whereilive.goodneighbor.myapplication.adapter.IconTextArrayAdapter;
-import whereilive.goodneighbor.myapplication.adapter.TwoColumnArrayAdapter;
-import whereilive.goodneighbor.myapplication.content.IconTextItem;
+import whereilive.goodneighbor.myapplication.adapter.DateLinkArrayAdapter;
 import whereilive.goodneighbor.myapplication.content.TwoColumnItem;
-import whereilive.goodneighbor.myapplication.dummy.DummyContent;
 
 public class NeighborFragment extends Fragment implements AbsListView.OnItemClickListener {
 
@@ -47,7 +43,7 @@ public class NeighborFragment extends Fragment implements AbsListView.OnItemClic
         list.add(new TwoColumnItem("1", "Today", "Anyone want to hit up concerts on Wednesday?"));
         list.add(new TwoColumnItem("2", "4/11", "Car pool?"));
         list.add(new TwoColumnItem("3", "4/10", "Dog park @ 10am"));
-        mAdapter = new TwoColumnArrayAdapter(getActivity(), list);
+        mAdapter = new DateLinkArrayAdapter(getActivity(), list);
 
     }
 
