@@ -7,16 +7,19 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AbsListView;
 import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.ListAdapter;
 import android.widget.TextView;
-
 
 import java.util.ArrayList;
 
 import whereilive.goodneighbor.myapplication.adapter.IconTextArrayAdapter;
+import whereilive.goodneighbor.myapplication.adapter.TwoColumnArrayAdapter;
 import whereilive.goodneighbor.myapplication.content.IconTextItem;
+import whereilive.goodneighbor.myapplication.content.TwoColumnItem;
+import whereilive.goodneighbor.myapplication.dummy.DummyContent;
 
-public class HomeFragment extends Fragment implements AbsListView.OnItemClickListener {
+public class NeighborFragment extends Fragment implements AbsListView.OnItemClickListener {
 
     /**
      * The fragment's ListView/GridView.
@@ -33,17 +36,19 @@ public class HomeFragment extends Fragment implements AbsListView.OnItemClickLis
      * Mandatory empty constructor for the fragment manager to instantiate the
      * fragment (e.g. upon screen orientation changes).
      */
-    public HomeFragment() {
+    public NeighborFragment() {
     }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         // TODO: Change Adapter to display your content
-        ArrayList<IconTextItem> list = new ArrayList<IconTextItem>();
-        list.add(new IconTextItem("1", R.drawable.mail_gray, "Kristi Gehring sent you a message"));
-        list.add(new IconTextItem("2", R.drawable.alert, "The leasing office is closed tomorrow"));
-        mAdapter = new IconTextArrayAdapter(getActivity(), list);
+        ArrayList<TwoColumnItem> list = new ArrayList<TwoColumnItem>();
+        list.add(new TwoColumnItem("1", "Today", "Anyone want to hit up concerts on Wednesday?"));
+        list.add(new TwoColumnItem("2", "4/11", "Car pool?"));
+        list.add(new TwoColumnItem("3", "4/10", "Dog park @ 10am"));
+        mAdapter = new TwoColumnArrayAdapter(getActivity(), list);
+
     }
 
     @Override
