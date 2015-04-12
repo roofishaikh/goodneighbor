@@ -13,7 +13,9 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 import whereilive.goodneighbor.myapplication.adapter.IconTextArrayAdapter;
+import whereilive.goodneighbor.myapplication.adapter.MessageArrayAdapter;
 import whereilive.goodneighbor.myapplication.content.IconTextItem;
+import whereilive.goodneighbor.myapplication.content.MessageItem;
 
 public class MailFragment extends Fragment implements AbsListView.OnItemClickListener {
 
@@ -39,10 +41,10 @@ public class MailFragment extends Fragment implements AbsListView.OnItemClickLis
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         // TODO: Change Adapter to display your content
-        ArrayList<IconTextItem> list = new ArrayList<IconTextItem>();
-        list.add(new IconTextItem("1", R.drawable.kristi_profile, "Krisi Gehring\n  How's it going?"));
-        list.add(new IconTextItem("2", R.drawable.chris_profile, "Chris Zeitler\n  Hike later?"));
-        mAdapter = new IconTextArrayAdapter(getActivity(), list);
+        ArrayList<MessageItem> list = new ArrayList<MessageItem>();
+        list.add(new MessageItem("1", R.drawable.kristi_profile, "Krisi Gehring", "Today", "How's it going?"));
+        list.add(new MessageItem("2", R.drawable.chris_profile, "Chris Zeitler", "4/10", "Hike later?"));
+        mAdapter = new MessageArrayAdapter(getActivity(), list);
     }
 
     @Override
