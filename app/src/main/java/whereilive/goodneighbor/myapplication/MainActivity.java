@@ -1,6 +1,9 @@
 package whereilive.goodneighbor.myapplication;
 
 import android.content.res.Resources;
+import android.graphics.Bitmap;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -47,23 +50,25 @@ public class MainActivity extends ActionBarActivity implements InfoFragment.OnFr
               actionBar.setTitle(appNameOnActionBar);
         setContentView(R.layout.activity_main);
 
+        int iconWidth = 100;
+        int iconHeight = 100;
+
         ActionBar.Tab tab1 = actionBar.newTab()
-                .setIcon(R.drawable.home).setTabListener(new TabListener<HomeFragment>(
+                .setIcon(scaleIcon(R.drawable.home, iconWidth, iconHeight)).setTabListener(new TabListener<HomeFragment>(
                         this, "Home", HomeFragment.class));
-
-
         actionBar.addTab(tab1);
+
         ActionBar.Tab tab2= actionBar.newTab()
-                .setIcon(R.drawable.info).setTabListener(new TabListener<InfoFragment>(
+                .setIcon(scaleIcon(R.drawable.info, iconWidth, iconHeight)).setTabListener(new TabListener<InfoFragment>(
                         this, "Info", InfoFragment.class));
         actionBar.addTab(tab2);
         ActionBar.Tab tab3= actionBar.newTab()
-                .setIcon(R.drawable.person).setTabListener(new TabListener<NeighborFragment>(
+                .setIcon(scaleIcon(R.drawable.person, iconWidth, iconHeight)).setTabListener(new TabListener<NeighborFragment>(
                         this, "Neighbors", NeighborFragment.class));
 
         actionBar.addTab(tab3);
         ActionBar.Tab tab4= actionBar.newTab()
-                .setIcon(R.drawable.mail_gray).setTabListener(new TabListener<MailFragment>(
+                .setIcon(scaleIcon(R.drawable.mail_gray, iconWidth, iconHeight)).setTabListener(new TabListener<MailFragment>(
                         this, "Mail", MailFragment.class));
         actionBar.addTab(tab4);
 
@@ -77,7 +82,11 @@ public class MainActivity extends ActionBarActivity implements InfoFragment.OnFr
 
     }
 
-
+    private Drawable scaleIcon(int icon, int width, int height) {
+        Drawable dr = getResources().getDrawable(icon);
+        Bitmap bitmap = ((BitmapDrawable) dr).getBitmap();
+        return new BitmapDrawable(getResources(), Bitmap.createScaledBitmap(bitmap, width, height, true));
+    }
 
 
     @Override
