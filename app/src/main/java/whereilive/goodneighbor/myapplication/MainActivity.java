@@ -50,6 +50,8 @@ public class MainActivity extends ActionBarActivity implements InfoFragment.OnFr
         ActionBar.Tab tab1 = actionBar.newTab()
                 .setIcon(R.drawable.home).setTabListener(new TabListener<HomeFragment>(
                         this, "Home", HomeFragment.class));
+
+
         actionBar.addTab(tab1);
         ActionBar.Tab tab2= actionBar.newTab()
                 .setIcon(R.drawable.info).setTabListener(new TabListener<InfoFragment>(
@@ -61,14 +63,9 @@ public class MainActivity extends ActionBarActivity implements InfoFragment.OnFr
 
         actionBar.addTab(tab3);
         ActionBar.Tab tab4= actionBar.newTab()
-                .setIcon(R.drawable.mail).setTabListener(new TabListener<MailFragment>(
+                .setIcon(R.drawable.mail_gray).setTabListener(new TabListener<MailFragment>(
                         this, "Mail", MailFragment.class));
         actionBar.addTab(tab4);
-
-
-
-
-
 
         // Create the adapter that will return a fragment for each of the three
         // primary sections of the activity.
@@ -79,6 +76,8 @@ public class MainActivity extends ActionBarActivity implements InfoFragment.OnFr
         mViewPager.setAdapter(mSectionsPagerAdapter);
 
     }
+
+
 
 
     @Override
