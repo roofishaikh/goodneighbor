@@ -55,13 +55,9 @@ public class MainActivity extends ActionBarActivity implements InfoFragment.OnFr
                         this, "Neighbors", HomeFragment.class));
         actionBar.addTab(tab3);
         ActionBar.Tab tab4= actionBar.newTab()
-<<<<<<< HEAD
-                .setIcon(R.drawable.mail).setTabListener(new TabListener<HomeFragment>(
-                        this, "Mail", HomeFragment.class));
-=======
-                .setText(R.string.tab4).setTabListener(new TabListener<MailFragment>(
+
+                .setIcon(R.drawable.mail).setTabListener(new TabListener<MailFragment>(
                         this, "Mail", MailFragment.class));
->>>>>>> 1b4edb77fa9de34a86efd352b4af6d260267517f
         actionBar.addTab(tab4);
 
 
@@ -102,10 +98,7 @@ public class MainActivity extends ActionBarActivity implements InfoFragment.OnFr
         return super.onOptionsItemSelected(item);
     }
 
-    @Override
-    public void onFragmentInteraction(String id) {
-
-    }
+  
 
 
     /**

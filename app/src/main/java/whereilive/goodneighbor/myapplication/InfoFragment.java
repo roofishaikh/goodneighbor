@@ -116,4 +116,7 @@ public class InfoFragment extends Fragment implements AbsListView.OnItemClickLis
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
     }
+
+    public interface OnFragmentInteractionListener {
+    }
 }
