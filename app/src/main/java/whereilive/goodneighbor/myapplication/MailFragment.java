@@ -40,8 +40,9 @@ public class MailFragment extends Fragment implements AbsListView.OnItemClickLis
         super.onCreate(savedInstanceState);
         // TODO: Change Adapter to display your content
         ArrayList<IconTextItem> list = new ArrayList<IconTextItem>();
-        list.add(new IconTextItem("1", android.R.drawable.checkbox_off_background, "Kristi Gehring\n  How's it going?"));
-        list.add(new IconTextItem("2", android.R.drawable.checkbox_off_background, "Property Management\n  WHERE'S MY MONEY?"));
+        list.add(new IconTextItem("1", android.R.drawable.checkbox_off_background, "Krisi Gehring\n  How's it going?"));
+        list.add(new IconTextItem("2", R.drawable.chris_profile, "Chris Zeitler\n  Hike later?"));
+        list.add(new IconTextItem("3", android.R.drawable.checkbox_off_background, "Property Management\n  WHERE'S MY MONEY?"));
         mAdapter = new IconTextArrayAdapter(getActivity(), list);
     }
 
