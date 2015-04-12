@@ -56,11 +56,11 @@ public class MainActivity extends ActionBarActivity implements InfoFragment.OnFr
                         this, "Info", InfoFragment.class));
         actionBar.addTab(tab2);
         ActionBar.Tab tab3= actionBar.newTab()
-                .setIcon(R.drawable.person).setTabListener(new TabListener<NeighborsFragment>(
-                        this, "Neighbors", NeighborsFragment.class));
+                .setIcon(R.drawable.person).setTabListener(new TabListener<NeighborFragment>(
+                        this, "Neighbors", NeighborFragment.class));
+
         actionBar.addTab(tab3);
         ActionBar.Tab tab4= actionBar.newTab()
-
                 .setIcon(R.drawable.mail).setTabListener(new TabListener<MailFragment>(
                         this, "Mail", MailFragment.class));
         actionBar.addTab(tab4);
