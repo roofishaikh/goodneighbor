@@ -55,8 +55,8 @@ public class MainActivity extends ActionBarActivity implements InfoFragment.OnFr
                         this, "Neighbors", HomeFragment.class));
         actionBar.addTab(tab3);
         ActionBar.Tab tab4= actionBar.newTab()
-                .setText(R.string.tab4).setTabListener(new TabListener<HomeFragment>(
-                        this, "Mail", HomeFragment.class));
+                .setText(R.string.tab4).setTabListener(new TabListener<MailFragment>(
+                        this, "Mail", MailFragment.class));
         actionBar.addTab(tab4);
 
 
