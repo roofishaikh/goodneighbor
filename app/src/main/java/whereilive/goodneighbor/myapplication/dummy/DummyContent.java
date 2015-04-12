@@ -25,9 +25,12 @@ public class DummyContent {
 
     static {
         // Add 3 sample items.
-        addItem(new DummyItem("1", "Item 1"));
-        addItem(new DummyItem("2", "Item 2"));
-        addItem(new DummyItem("3", "Item 3"));
+        addItem(new DummyItem("1", "My Condo"));
+        addItem(new DummyItem("2", "Contact"));
+        addItem(new DummyItem("3", "Service Providers"));
+        addItem(new DummyItem("3", "By Laws"));
+        addItem(new DummyItem("3", "Community Room"));
+        addItem(new DummyItem("3", "Notifications"));
     }
 
     private static void addItem(DummyItem item) {
