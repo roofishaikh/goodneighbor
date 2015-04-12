@@ -1,5 +1,6 @@
 package whereilive.goodneighbor.myapplication;
 
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -40,6 +41,10 @@ public class MainActivity extends ActionBarActivity implements InfoFragment.OnFr
         ActionBar actionBar = getSupportActionBar();
         actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
         actionBar.setDisplayShowTitleEnabled(false);
+        Resources res = getResources();
+        String appNameOnActionBar = res.getString(R.string.app_name);
+        if(appNameOnActionBar!=null)
+              actionBar.setTitle(appNameOnActionBar);
         setContentView(R.layout.activity_main);
 
         ActionBar.Tab tab1 = actionBar.newTab()
