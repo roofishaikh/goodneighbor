@@ -1,6 +1,5 @@
 package whereilive.goodneighbor.myapplication;
 
-import android.app.Activity;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -8,12 +7,14 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AbsListView;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.ListAdapter;
 import android.widget.TextView;
 
 
-import whereilive.goodneighbor.myapplication.content.HomeContent;
+import java.util.ArrayList;
+
+import whereilive.goodneighbor.myapplication.adapter.IconTextArrayAdapter;
+import whereilive.goodneighbor.myapplication.content.IconTextItem;
 
 public class HomeFragment extends Fragment implements AbsListView.OnItemClickListener {
 
@@ -39,8 +40,10 @@ public class HomeFragment extends Fragment implements AbsListView.OnItemClickLis
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         // TODO: Change Adapter to display your content
-        mAdapter = new ArrayAdapter<HomeContent.DummyItem>(getActivity(),
-                android.R.layout.simple_list_item_1, android.R.id.text1, HomeContent.ITEMS);
+        ArrayList<IconTextItem> list = new ArrayList<IconTextItem>();
+        list.add(new IconTextItem("1", android.R.drawable.ic_dialog_email, "Kristi Gehring sent you a message"));
+        list.add(new IconTextItem("2", android.R.drawable.ic_dialog_alert, "The office is closed tomorrow"));
+        mAdapter = new IconTextArrayAdapter(getActivity(), list);
     }
 
     @Override

@@ -2,7 +2,7 @@ package whereilive.goodneighbor.myapplication;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.app.Fragment;
+import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -26,7 +26,7 @@ import whereilive.goodneighbor.myapplication.dummy.DummyContent;
  *
  * implements AbsListView.OnItemClickListener
  */
-public class InfoFragment extends Fragment  implements AbsListView.OnItemClickListener{
+public class InfoFragment extends Fragment implements AbsListView.OnItemClickListener{
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
