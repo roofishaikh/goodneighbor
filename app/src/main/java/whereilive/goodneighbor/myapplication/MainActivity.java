@@ -47,8 +47,8 @@ public class MainActivity extends ActionBarActivity {
                         this, "Home", HomeFragment.class));
         actionBar.addTab(tab1);
         ActionBar.Tab tab2= actionBar.newTab()
-                .setText(R.string.tab2).setTabListener(new TabListener<HomeFragment>(
-                        this, "Info", HomeFragment.class));
+                .setText(R.string.tab2).setTabListener(new TabListener<InfoFragment>(
+                        this, "Info", InfoFragment.class));
         actionBar.addTab(tab2);
         ActionBar.Tab tab3= actionBar.newTab()
                 .setText(R.string.tab3).setTabListener(new TabListener<HomeFragment>(

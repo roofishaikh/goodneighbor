@@ -23,8 +23,10 @@ import whereilive.goodneighbor.myapplication.dummy.DummyContent;
  * <p/>
  * Activities containing this fragment MUST implement the {@link OnFragmentInteractionListener}
  * interface.
+ *
+ * implements AbsListView.OnItemClickListener
  */
-public class InfoFragment extends Fragment implements AbsListView.OnItemClickListener {
+public class InfoFragment extends Fragment  implements AbsListView.OnItemClickListener{
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
