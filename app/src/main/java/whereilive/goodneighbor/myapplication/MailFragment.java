@@ -10,13 +10,12 @@ import android.widget.AdapterView;
 import android.widget.ListAdapter;
 import android.widget.TextView;
 
-
 import java.util.ArrayList;
 
 import whereilive.goodneighbor.myapplication.adapter.IconTextArrayAdapter;
 import whereilive.goodneighbor.myapplication.content.IconTextItem;
 
-public class HomeFragment extends Fragment implements AbsListView.OnItemClickListener {
+public class MailFragment extends Fragment implements AbsListView.OnItemClickListener {
 
     /**
      * The fragment's ListView/GridView.
@@ -33,7 +32,7 @@ public class HomeFragment extends Fragment implements AbsListView.OnItemClickLis
      * Mandatory empty constructor for the fragment manager to instantiate the
      * fragment (e.g. upon screen orientation changes).
      */
-    public HomeFragment() {
+    public MailFragment() {
     }
 
     @Override
@@ -41,15 +40,16 @@ public class HomeFragment extends Fragment implements AbsListView.OnItemClickLis
         super.onCreate(savedInstanceState);
         // TODO: Change Adapter to display your content
         ArrayList<IconTextItem> list = new ArrayList<IconTextItem>();
-        list.add(new IconTextItem("1", android.R.drawable.ic_dialog_email, "Kristi Gehring sent you a message"));
-        list.add(new IconTextItem("2", android.R.drawable.ic_dialog_alert, "The office is closed tomorrow"));
+        list.add(new IconTextItem("1", android.R.drawable.checkbox_off_background, "Krisi Gehring\n  How's it going?"));
+        list.add(new IconTextItem("2", R.drawable.chris_profile, "Chris Zeitler\n  Hike later?"));
+        list.add(new IconTextItem("3", android.R.drawable.checkbox_off_background, "Property Management\n  WHERE'S MY MONEY?"));
         mAdapter = new IconTextArrayAdapter(getActivity(), list);
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_home, container, false);
+        View view = inflater.inflate(R.layout.fragment_mail, container, false);
 
         // Set the adapter
         mListView = (AbsListView) view.findViewById(android.R.id.list);

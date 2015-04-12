@@ -16,7 +16,7 @@ import android.view.ViewGroup;
 import java.util.Locale;
 
 
-public class MainActivity extends ActionBarActivity {
+public class MainActivity extends ActionBarActivity implements InfoFragment.OnFragmentInteractionListener {
 
     /**
      * The {@link android.support.v4.view.PagerAdapter} that will provide
@@ -55,8 +55,13 @@ public class MainActivity extends ActionBarActivity {
                         this, "Neighbors", HomeFragment.class));
         actionBar.addTab(tab3);
         ActionBar.Tab tab4= actionBar.newTab()
+<<<<<<< HEAD
                 .setIcon(R.drawable.mail).setTabListener(new TabListener<HomeFragment>(
                         this, "Mail", HomeFragment.class));
+=======
+                .setText(R.string.tab4).setTabListener(new TabListener<MailFragment>(
+                        this, "Mail", MailFragment.class));
+>>>>>>> 1b4edb77fa9de34a86efd352b4af6d260267517f
         actionBar.addTab(tab4);
 
 
@@ -95,6 +100,11 @@ public class MainActivity extends ActionBarActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onFragmentInteraction(String id) {
+
     }
 
 
