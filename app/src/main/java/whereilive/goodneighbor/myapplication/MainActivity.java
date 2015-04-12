@@ -43,11 +43,12 @@ public class MainActivity extends ActionBarActivity implements InfoFragment.OnFr
       // setup action bar for tabs
         ActionBar actionBar = getSupportActionBar();
         actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
-        actionBar.setDisplayShowTitleEnabled(false);
         Resources res = getResources();
-        String appNameOnActionBar = res.getString(R.string.app_name);
-        if(appNameOnActionBar!=null)
-              actionBar.setTitle(appNameOnActionBar);
+
+        actionBar.setTitle(res.getString(R.string.app_name));
+        actionBar.setDisplayUseLogoEnabled(true);
+        actionBar.setDisplayShowTitleEnabled(true);
+
         setContentView(R.layout.activity_main);
 
         int iconWidth = 100;
@@ -68,9 +69,7 @@ public class MainActivity extends ActionBarActivity implements InfoFragment.OnFr
 
         actionBar.addTab(tab3);
         ActionBar.Tab tab4= actionBar.newTab()
-
-                .setIcon(scaleIcon(R.drawable.mail, iconWidth, iconHeight)).setTabListener(new TabListener<MailFragment>(
-
+                .setIcon(scaleIcon(R.drawable.mail, 130, iconHeight)).setTabListener(new TabListener<MailFragment>(
                         this, "Mail", MailFragment.class));
         actionBar.addTab(tab4);
 

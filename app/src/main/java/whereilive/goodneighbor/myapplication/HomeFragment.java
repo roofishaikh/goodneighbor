@@ -41,8 +41,8 @@ public class HomeFragment extends Fragment implements AbsListView.OnItemClickLis
         super.onCreate(savedInstanceState);
         // TODO: Change Adapter to display your content
         ArrayList<IconTextItem> list = new ArrayList<IconTextItem>();
-        list.add(new IconTextItem("1", R.drawable.mail_gray, "Kristi Gehring sent you a message"));
-        list.add(new IconTextItem("2", R.drawable.alert, "The leasing office is closed tomorrow"));
+        list.add(new IconTextItem("1", R.drawable.mail, "Kristi Gehring sent you a message"));
+        list.add(new IconTextItem("2", android.R.drawable.ic_dialog_alert, "The leasing office is closed tomorrow"));
         mAdapter = new IconTextArrayAdapter(getActivity(), list);
     }
 

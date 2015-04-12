@@ -1,7 +1,7 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.Light">
         <item name="android:windowBackground">@color/background_custom</item>
         <item name="android:textColor">@color/white</item>
 
@@ -17,8 +17,14 @@
         <item name="android:actionBarTabStyle">@style/MyActionBarTabs</item>
         <item name="actionBarTabStyle">@style/MyActionBarTabs</item>
 
-        <item name="android:background">@color/tab_custom</item>
-        <item name="background">@color/tab_custom</item>
+        <item name="android:background">@color/white</item>
+        <item name="background">@color/white</item>
+
+        <item name="android:titleTextStyle">@style/TitleTextStyle</item>
+        <item name="titleTextStyle">@style/TitleTextStyle</item>
+
+        <item name="logo">@drawable/logo_blue</item>
+        <item name="displayOptions">useLogo|showHome</item>
     </style>
 
     <!-- ActionBar tabs styles -->
@@ -29,6 +35,10 @@
 
         <!-- Support library compatibility -->
         <item name="background">@drawable/tab_bar_background</item>
+    </style>
+
+    <style name="TitleTextStyle" parent="@style/TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:textColor">@color/background_custom</item>
     </style>
 
 </resources>
