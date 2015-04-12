@@ -43,19 +43,20 @@ public class MainActivity extends ActionBarActivity implements InfoFragment.OnFr
         setContentView(R.layout.activity_main);
 
         ActionBar.Tab tab1 = actionBar.newTab()
-                .setText(R.string.tab1).setTabListener(new TabListener<HomeFragment>(
+                .setIcon(R.drawable.home).setTabListener(new TabListener<HomeFragment>(
                         this, "Home", HomeFragment.class));
         actionBar.addTab(tab1);
         ActionBar.Tab tab2= actionBar.newTab()
-                .setText(R.string.tab2).setTabListener(new TabListener<InfoFragment>(
+                .setIcon(R.drawable.info).setTabListener(new TabListener<InfoFragment>(
                         this, "Info", InfoFragment.class));
         actionBar.addTab(tab2);
         ActionBar.Tab tab3= actionBar.newTab()
-                .setText(R.string.tab3).setTabListener(new TabListener<NeighborFragment>(
-                        this, "Neighbors", NeighborFragment.class));
+                .setIcon(R.drawable.person).setTabListener(new TabListener<NeighborsFragment>(
+                        this, "Neighbors", NeighborsFragment.class));
+
         actionBar.addTab(tab3);
         ActionBar.Tab tab4= actionBar.newTab()
-                .setText(R.string.tab4).setTabListener(new TabListener<MailFragment>(
+                .setIcon(R.drawable.mail).setTabListener(new TabListener<MailFragment>(
                         this, "Mail", MailFragment.class));
         actionBar.addTab(tab4);
 
@@ -97,10 +98,7 @@ public class MainActivity extends ActionBarActivity implements InfoFragment.OnFr
         return super.onOptionsItemSelected(item);
     }
 
-    @Override
-    public void onFragmentInteraction(String id) {
 
-    }
 
 
     /**
