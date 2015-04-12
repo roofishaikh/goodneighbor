@@ -63,7 +63,7 @@ public class MainActivity extends ActionBarActivity implements InfoFragment.OnFr
 
         actionBar.addTab(tab3);
         ActionBar.Tab tab4= actionBar.newTab()
-                .setIcon(R.drawable.mail_gray).setTabListener(new TabListener<MailFragment>(
+                .setIcon(R.drawable.mail).setTabListener(new TabListener<MailFragment>(
                         this, "Mail", MailFragment.class));
         actionBar.addTab(tab4);
 
